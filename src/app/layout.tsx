@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 const basicInfo = {
-  title: `${personalInfo.name} | Portfolio`,
+  title: `${personalInfo.fullname} | Portfolio`,
   description: `${personalInfo.summary}`,
 };
 

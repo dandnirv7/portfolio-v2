@@ -1,6 +1,6 @@
 import { Project } from "@/types";
 
-export const domainPath = "https://dandnirv-portfolio.netlify.app";
+export const domainPath = "https://dandnirv-portfolio.vercel.app";
 
 export const personalInfo = {
   name: "Dandi",
@@ -178,6 +178,16 @@ export const projects: Project[] = [
     status: "Completed",
     techStacks: ["React", "TailwindCSS", "Shadcn-UI", "localStorage"],
     date: "2024-7-24",
+  },
+  {
+    title: "Laundry API",
+    description: `"Laundry API" is a robust backend service designed for a laundry management application, developed during the Bootcamp Pesilat Alkademi - AWS in Communities. Built with Node.js, Express, MySQL, and Sequelize, it efficiently handles data for managing orders, services, and customers.`,
+    image: "",
+    github: "https://github.com/dandnirv7/laundry-api",
+    demo: "",
+    status: "Completed",
+    techStacks: ["Node.js", "Express.js", "MySQL", "Sequelize"],
+    date: "2023-6-11",
   },
   {
     title: "The Meal",
