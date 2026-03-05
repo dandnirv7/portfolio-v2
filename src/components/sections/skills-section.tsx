@@ -19,32 +19,35 @@ const staggerContainer = {
 };
 
 const skills = [
-  "TypeScript",
   "Next.js (React)",
   "Nuxt (Vue.js)",
-  "Git",
-  "Linux",
-  "Tailwind CSS",
-  "Bootstrap",
+  "TypeScript",
+  "NestJS",
+  "Supabase / Prisma",
   "REST API",
+  "Tailwind CSS",
+  "Authentication (Better Auth, OAuth, 2FA)",
+  "Payment Gateway (Xendit & Midtrans)",
+  "TanStack Query",
 ];
 
 const softSkills = [
   "Team Collaboration",
   "Problem Solving",
   "Time Management",
-  "Adaptability",
   "Communication",
   "Critical Thinking",
+  "Agile / Scrum Awareness",
+  "Fast Learning",
 ];
 
 const toolsAndWorkflow = [
+  "Git",
   "Trello",
   "Postman",
-  "Figma",
-  "Notion",
-  "GitHub",
   "Vercel",
+  "Hugging Face",
+  "Figma",
   "Netlify",
 ];
 

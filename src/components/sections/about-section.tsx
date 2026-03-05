@@ -54,14 +54,12 @@ export function AboutSection() {
             variants={fadeIn}
           >
             <h3 className="mb-4 text-2xl font-semibold">My Journey</h3>
-            <p className="mb-6 text-muted-foreground">{personalInfo.summary}</p>
-            <p className="mb-6 text-muted-foreground">
-              I specialize in front-end development with React and TypeScript,
-              but I&apos;m also comfortable working on the back-end when needed.
-              I believe in writing clean, maintainable code and creating
-              intuitive user experiences.
-            </p>
-            <div className="flex gap-2">
+            {personalInfo.summary.map((summary, index) => (
+              <p key={index} className="mb-2 text-muted-foreground">
+                {summary}
+              </p>
+            ))}
+            <div className="flex gap-2 mt-4">
               <Button
                 variant="outline"
                 className="py-4 text-xs rounded-full sm:text-sm group border-primary/20 hover:border-primary/50"

@@ -15,8 +15,13 @@ export const personalInfo = {
     location: "Bekasi, Indonesia",
   },
   profilePicture: "/images/profile-picture.jpg",
-  summary:
-    "Passionate front-end developer with 4 months of hands-on experience from an AWS-supported fullstack bootcamp. Skilled in JavaScript, TypeScript, React, Vue.js, Nuxt, Tailwind CSS, Bootstrap, Shadcn-ui and Flowbite. Enjoys collaborating in real-world projects using Git and Trello, and constantly exploring new front-end technologies.",
+  summary: [
+    `Passionate Fullstack Developer who enjoys building modern web applications from idea to deployment. Work primarily focuses on the React ecosystem with Next.js on the front-end and Node.js with NestJS on the back-end, aiming to create applications that are fast, reliable, and maintainable.`,
+
+    `Experienced with technologies such as TypeScript, Prisma, Supabase, and Tailwind CSS, including implementing authentication systems and payment gateway integrations like Xendit and Midtrans. Built a strong foundation through the Alkademi x AWS in Communities bootcamp and hands-on projects, with emphasis on clean coding practices, Git-based workflows, and Agile collaboration using tools like Trello.`,
+
+    `Driven by curiosity and continuous learning, with a strong interest in building scalable products and improving developer and user experiences through modern web technologies.`,
+  ],
 };
 
 // Example education data
@@ -28,7 +33,7 @@ export const educations = [
     startDate: "2023-9",
     endDate: "",
     description:
-      "Basic Programming Concepts through various languages such as Object-Oriented Programming in Java. Mathematics courses included Algebra, Calculus, Statistics, Discrete Math, Language and Automata Theory.",
+      "Programming and Mathematics courses covering concepts such as Object-Oriented Programming in Java, PHP and Laravel, Database Applications, Web Programming, Numerical Computation, and Cybersecurity. Mathematics background includes Algebra, Calculus, Statistics, Discrete Mathematics, and Language & Automata Theory.",
     achievements: [],
     logo: "/images/institutions/bani-saleh.png",
     cgpa: "3.69",
@@ -103,43 +108,33 @@ export const educations = [
 
 export const projects: Project[] = [
   {
-    title: "Noku: Mini e-Commerce",
+    title: "Noku Coffee",
     description:
-      "Noku delivers a smooth and efficient coffee shopping experience, combining an intuitive interface with powerful features like real-time cart updates and automated order tracking. Designed for both customers and admins, it includes a sleek dashboard to monitor sales and customer activity, streamlining the entire process.",
-    github: "https://github.com/dandnirv7/mini-pos",
+      "An advanced, scalable e-commerce platform engineered to deliver a seamless and secure shopping experience. The system is fortified with advanced database locking mechanisms and price snapshotting to guarantee inventory accuracy and prevent data discrepancies during high-traffic transactions. It features a fully integrated Xendit payment gateway equipped with automated verification and comprehensive fraud detection logic. To optimize operational efficiency, the application utilizes NestJS Schedule (Cron Jobs) to automate order lifecycles and cancellations, significantly reducing manual overhead. Additionally, the product search functionality is enhanced with strategic caching and URL-based filtration for blazing-fast navigation.",
+    github: "https://github.com/dandnirv7/noku-coffee-frontend",
+    image: "/images/projects/noku-coffee.jpg",
+    demo: "https://noku-coffee.vercel.app/",
     status: "In Progress",
     techStacks: [
       "Next.js",
       "React",
       "TypeScript",
+      "NestJS",
       "Supabase",
       "Prisma",
       "PostgreSQL",
       "NextAuth.js",
+      "OAuth 2.0",
       "Tanstack Query",
       "Tailwind CSS",
+      "Xendit",
     ],
-    date: "2025-5-26",
-  },
-  {
-    title: "Aspirasi Desa",
-    description: `"Aspirasi Desa" is the final project I developed during the intensive Alkademi-AWS community bootcamp. In this project, our team collaborated closely, combining frontend and backend skills to create a full-stack web application. Utilizing a tech stack that includes Nuxt, Express, Sequelize, Tailwind, Flowbite, and MySQL, we aimed to build a robust platform. For effective collaboration and project management, we used Trello to organize our tasks and facilitate daily stand-ups, ensuring smooth communication throughout the development process.`,
-    github: "https://github.com/dandnirv7/asp-desa-frontend",
-    status: "Completed",
-    techStacks: [
-      "Nuxt",
-      "Express",
-      "Sequelize",
-      "MySQL",
-      "TailwindCSS",
-      "Flowbite",
-    ],
-    date: "2023-8-28",
+    date: "2026-01-23",
   },
   {
     title: "Night Movie",
     description:
-      "Night Movie is a modern movie streaming platform powered by the TMDB API. Built with React, TypeScript, and TailwindCSS, it offers a responsive interface for exploring an extensive collection of movies and TV shows. Key features include efficient search and filtering by genre, release date, and popularity, along with detailed information like ratings and trailers. Utilizing Tanstack Query for data management and caching ensures quick load times. Its modular architecture allows for future enhancements, such as user accounts and personalized recommendations, making Night Movie a modern and scalable streaming solution.",
+      "A highly responsive movie streaming platform featuring sophisticated search and filtration capabilities, built with React and TypeScript. The application boasts a 30% reduction in loading times achieved through optimized data fetching and intelligent caching strategies utilizing React Query. Furthermore, the platform's performance and scalability are significantly enhanced through rigorous code splitting and lazy loading techniques. The entire architecture is highly modular, emphasizing reusable components to ensure long-term maintainability and clean code practices.",
     image: "/images/projects/night-movie.png",
     demo: "https://night-movie-ten.vercel.app/",
     status: "Completed",
@@ -154,7 +149,8 @@ export const projects: Project[] = [
   },
   {
     title: "Berita Kini",
-    description: `"Berita Kini" is a sleek and informative news website developed during the Technical Frontend Internship MSIB Batch 7 program. Following a detailed Figma design, this project was built as a static website to showcase the latest news from Indonesia. It consumes data from the Berita Indonesia API and provides a clean, responsive interface for users to browse news by category.`,
+    description:
+      "A static news portal developed rapidly within three days as part of a competitive frontend internship selection (MSIB Batch 7). The platform integrates seamlessly with the Berita Indonesia API to deliver real-time content updates. The project involved transforming a comprehensive Figma design into a highly responsive and accessible user interface, prioritizing optimal usability across various devices.",
     image: "/images/projects/berita-kini.png",
     github: "https://github.com/dandnirv7/berita-kini",
     demo: "https://berita-kini-one.vercel.app/",
@@ -167,6 +163,22 @@ export const projects: Project[] = [
       "Shadcn-UI",
     ],
     date: "2024-10-17",
+  },
+  {
+    title: "Aspirasi Desa",
+    description:
+      "A public feedback management system designed to facilitate communication between village residents and local administration. The frontend, developed with Nuxt.js and Tailwind CSS, integrates robustly with a backend RESTful API to manage the submission and tracking of public aspirations. The application emphasizes performance through lazy loading and a highly modular code structure. Development was driven by an Agile workflow managed via Trello, ensuring efficient cross-team collaboration.",
+    github: "https://github.com/dandnirv7/asp-desa-frontend",
+    status: "Completed",
+    techStacks: [
+      "Nuxt.js",
+      "Express.js",
+      "Sequelize",
+      "MySQL",
+      "Tailwind CSS",
+      "Flowbite",
+    ],
+    date: "2023-07-01",
   },
   {
     title: "Taskia",

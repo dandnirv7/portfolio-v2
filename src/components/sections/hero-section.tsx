@@ -132,7 +132,14 @@ export function HeroSection() {
               <div className="overflow-hidden h-[64px] sm:h-[72px] md:h-[80px] lg:h-[100px] mt-2">
                 {isMounted && (
                   <TypeAnimation
-                    sequence={["Frontend Web Developer", 2000]}
+                    sequence={[
+                      personalInfo.title,
+                      2000,
+                      "Fullstack JavaScript",
+                      2000,
+                      "Tech Enthusiast",
+                      2000,
+                    ]}
                     wrapper="span"
                     speed={50}
                     repeat={Infinity}
@@ -150,17 +157,19 @@ export function HeroSection() {
               className="relative"
             >
               <p className="max-w-xl pr-8 mb-10 text-lg leading-relaxed md:text-xl text-muted-foreground">
-                I create{" "}
+                I build{" "}
                 <span className="font-medium text-foreground">
-                  elegant, user-focused
+                  modern web experiences
                 </span>{" "}
-                web experiences with modern technologies. Passionate about
-                turning complex problems into
+                that are{" "}
                 <span className="font-medium text-foreground">
-                  {" "}
-                  simple, intuitive
+                  fast, scalable
                 </span>{" "}
-                solutions.
+                and{" "}
+                <span className="font-medium text-foreground">
+                  intuitive to use
+                </span>
+                .
               </p>
 
               {/* Static decorative element instead of animated */}
@@ -261,7 +270,7 @@ export function HeroSection() {
               {/* Card content with simplified animations */}
               {(() => {
                 const codeContent = {
-                  skills: ["Next.js", "TypeScript", "Nuxt"],
+                  skills: ["Next.js", "NestJS", "Supabase", "Tanstack Query"],
                   passion:
                     "I believe in writing clean, maintainable code and creating intuitive user experiences",
                 };
