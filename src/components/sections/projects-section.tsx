@@ -10,21 +10,27 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function useBreakpoint() {
-  const [width, setWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0,
+  // Use a default breakpoint for the initial SSR and hydration pass
+  const [breakpoint, setBreakpoint] = useState<"desktop" | "tablet" | "mobile">(
+    "desktop",
   );
 
   useEffect(() => {
     function handleResize() {
-      setWidth(window.innerWidth);
+      const width = window.innerWidth;
+      if (width >= 1024) setBreakpoint("desktop");
+      else if (width >= 768) setBreakpoint("tablet");
+      else setBreakpoint("mobile");
     }
+
+    // Call once after mount to set correct breakpoint for client
+    handleResize();
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  if (width >= 1024) return "desktop";
-  if (width >= 768) return "tablet";
-  return "mobile";
+  return breakpoint;
 }
 
 const fadeIn = {
